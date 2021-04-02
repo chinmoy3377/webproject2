@@ -1,0 +1,182 @@
+@import url(../fonts/stylesheet.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    font-size: 17px;
+    background: #fafafa;
+    color:#000;
+    line-height: 1.5;
+    font-family: 'TT Commons', 'Times New Roman', 'Helvetica', 'sans-serif';
+}
+
+
+
+#showcase{
+    background-image: url(../img/main.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+}
+
+#showcase h1{
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    word-spacing: 20px;
+    line-height: 1.5;
+    color: #bcfefe;
+    position: relative;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes heading {
+    0% {top: -50px}
+    100% {top: 200px}
+}
+
+#showcase p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 200px;
+    padding: 0 200px;
+    word-spacing: 3px;
+    position: relative;
+    animation: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0% {left: -1000px}
+    100% {left: 0px}
+}
+
+#showcase .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: #e3e872;
+    border: #e3e872 1px solid;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: button;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#showcase .button:hover{
+    transform: rotateY(180deg);
+}
+
+@keyframes button {
+    0% {opacity:0}
+    100% {opacity:1}
+}
+
+
+/* Cards image sizes */
+
+
+.cards #card1 img,
+.cards #card2 img,
+.cards #card3 img,
+.cards #card5 img,
+.cards #card6 img{
+    height: 90px;
+}
+
+.cards #card4 img{
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cards{
+    display: grid;
+    margin: 50px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+    text-align: center;
+}
+
+.cards #card1 h2,
+.cards #card2 h2,
+.cards #card3 h2,
+.cards #card4 h2,
+.cards #card5 h2,
+.cards #card6 h2{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+
+.cards #card1,
+.cards #card2,
+.cards #card3,
+.cards #card4,
+.cards #card5,
+.cards #card6{
+    padding: 45px 5px;
+    background-color: #fff;
+    color: #0D0C2B;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 4px 6px 0 rgba(0,0,0,0.2);
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+.cards #card1:hover,
+.cards #card2:hover,
+.cards #card3:hover,
+.cards #card4:hover,
+.cards #card5:hover,
+.cards #card6:hover{
+    padding: 45px 5px;
+    background-color: #0D1821;
+    /* background-color: white; */
+    box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+    transform: translatey(-4px);
+    transition: all 0.2s ease;
+    color: #fff;
+}
+
+@media(max-width: 768px){
+    #showcase h1{
+        font-size: 50px;
+    }
+
+    #showcase p{
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .cards{
+        display: grid;
+        margin: 50px;
+        grid-template-columns: 1fr;
+        grid-column-gap: 50px;
+        grid-row-gap: 50px;
+    }
+
+}
